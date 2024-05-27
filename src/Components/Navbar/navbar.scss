@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+}
+.navbar {
+    background-color: #c80606;
+  
+    .navbar-brand {
+      color: #3563e9;
+      font-weight: bold;
+  
+      &:hover {
+        color: #274bb5;
+      }
+    }
+  
+    .nav-link {
+      color: #5a5a5a;
+  
+      &.active {
+        color: #000;
+      }
+  
+      &:hover {
+        color: #274bb5;
+      }
+  
+      &.disabled {
+        color: #ccc;
+      }
+    }
+    .navbar-collapse{
+        justify-content: space-around;
+    }
+  
+    .collapse-content{
+        display: flex;
+        align-items: center;
+    }
+    .form-control {
+      border-radius: 5px;
+    }
+  
+    .btn-outline-success {
+      border-color: #28a745;
+      color: #28a745;
+  
+      &:hover {
+        background-color: #28a745;
+        color: white;
+      }
+    }
+  }
+  
