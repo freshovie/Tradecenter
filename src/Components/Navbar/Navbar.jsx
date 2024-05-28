@@ -14,7 +14,7 @@ const Navbar = () => {
         });
       }, []);
   return (
-    <nav className="navbar navbar-expand-lg navbar-light">
+    <nav className="navbar navbar-expand-lg sticky navbar-light">
       <div className="container">
         <a className="navbar-brand me-2" href="https://mdbgo.com/" data-aos="fade-right">
           <img

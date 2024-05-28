@@ -35,7 +35,7 @@ const Footer = () => {
               </p>
             </div>
             <div className="footer-container">
-              <div className="footer-col" data-aos="fade-up">
+              <div className="footer-col" data-aos="fade-right">
                 <h4>My Account</h4>
                 <ul className="links">
                   <li>
@@ -52,7 +52,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div className="footer-col" data-aos="fade-down">
+              <div className="footer-col" data-aos="fade-left">
                 <h4>Help</h4>
                 <ul className="links">
                   <li>
@@ -69,7 +69,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div className="footer-col" data-aos="fade-up">
+              <div className="footer-col" data-aos="fade-right">
                 <h4>Proxy</h4>
                 <ul className="links">
                   <li>
@@ -86,7 +86,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div className="footer-col" data-aos="fade-down">
+              <div className="footer-col" data-aos="fade-left">
                 <h4>Categories</h4>
                 <ul className="links">
                   <li>

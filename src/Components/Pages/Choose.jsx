@@ -31,7 +31,7 @@ const Choose = () => {
                   <img src={ Picture } alt="Picture" />
                   <img src={Picture1} alt="Picture1" />
                 </div>
-                <img src={Picture2} alt="Picture2" className="me-2" />
+                <img src={Picture2} alt="Picture2" className="me-2 w-100" />
               </div>
             </div>
           </div>

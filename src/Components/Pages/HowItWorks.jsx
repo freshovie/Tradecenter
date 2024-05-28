@@ -1,5 +1,5 @@
 import React ,{useEffect}from "react";
-import { Bg1, Icon, Icon1, Icon2, Icon3, Men } from "../../assets";
+import { Bg1, GroupMen, Icon, Icon1, Icon2, Icon3, Men } from "../../assets";
 import "./style.scss";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS CSS
@@ -24,11 +24,8 @@ const HowItWorks = () => {
             {/* Heading */}
             <h3>How it Works</h3>
             <div className="it-works">
-              {/* Background image */}
-              <img src={Bg1} alt="Background" />
-              {/* Overlaying image */}
               <div className="guys-read" data-aos="fade-right">
-                <img src={Men} alt="Foreground" />
+                <img src={GroupMen} alt="Foreground" />
               </div>
               {/* Text content */}
               <div className="it-works-text" data-aos="fade-left">

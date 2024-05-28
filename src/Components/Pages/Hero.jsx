@@ -17,7 +17,6 @@ const Hero = () => {
         <div className="heros">
       <div className="row">
         <div className="col-sm-12 col-md-12 col-lg-1"></div>
-            
         <div className="col-sm-12 col-md-12 col-lg-10">
           <div className="hero">
             <div className="heroedit" data-aos="fade-right">
