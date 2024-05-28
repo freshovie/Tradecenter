@@ -1,17 +1,18 @@
-import React ,{useEffect}from "react";
-import { Bg1, GroupMen, Icon, Icon1, Icon2, Icon3, Men } from "../../assets";
+import React, { useEffect } from "react";
+import { GroupMen, Icon, Icon1, Icon2, Icon3 } from "../../assets";
 import "./style.scss";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS CSS
 
-
 const HowItWorks = () => {
-    useEffect(() => {
-        AOS.init({
-          duration: 1000, // Animation duration
-          once: true, // Whether animation should happen only once - while scrolling down
-        });
-      }, []);
+  // Initialize AOS for scroll animations
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: true, // Whether animation should happen only once while scrolling down
+    });
+  }, []);
+
   return (
     <React.Fragment>
       {/* How it Works section */}
@@ -24,14 +25,15 @@ const HowItWorks = () => {
             {/* Heading */}
             <h3>How it Works</h3>
             <div className="it-works">
+              {/* Image on the left with fade-right animation */}
               <div className="guys-read" data-aos="fade-right">
-                <img src={GroupMen} alt="Foreground" />
+                <img src={GroupMen} alt="Group of Men" />
               </div>
-              {/* Text content */}
+              {/* Text content on the right with fade-left animation */}
               <div className="it-works-text" data-aos="fade-left">
                 {/* Step 1 */}
                 <div className="icon">
-                  <img src={Icon} alt="" />
+                  <img src={Icon} alt="Browse Products Icon" />
                   <p>
                     <span>Browse Products</span>
                   </p>
@@ -39,7 +41,7 @@ const HowItWorks = () => {
                 </div>
                 {/* Step 2 */}
                 <div className="icon">
-                  <img src={Icon1} alt="" />
+                  <img src={Icon1} alt="Join a Bulk Buy Icon" />
                   <p>
                     <span>Join a Bulk Buy</span>
                   </p>
@@ -47,7 +49,7 @@ const HowItWorks = () => {
                 </div>
                 {/* Step 3 */}
                 <div className="icon">
-                  <img src={Icon2} alt="" />
+                  <img src={Icon2} alt="Pay Your Share of Wholesale Price Icon" />
                   <p>
                     <span>Pay Your Share of Wholesale Price</span>
                   </p>
@@ -55,7 +57,7 @@ const HowItWorks = () => {
                 </div>
                 {/* Step 4 */}
                 <div className="icon">
-                  <img src={Icon3} alt="" />
+                  <img src={Icon3} alt="Enjoy Icon" />
                   <p>
                     <span>Enjoy</span>
                   </p>
