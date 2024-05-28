@@ -1,8 +1,17 @@
-import React from "react";
+import React ,{useEffect}from "react";
 import { Bg1, Icon, Icon1, Icon2, Icon3, Men } from "../../assets";
 import "./style.scss";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS CSS
+
 
 const HowItWorks = () => {
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, // Animation duration
+          once: true, // Whether animation should happen only once - while scrolling down
+        });
+      }, []);
   return (
     <React.Fragment>
       {/* How it Works section */}
@@ -18,11 +27,11 @@ const HowItWorks = () => {
               {/* Background image */}
               <img src={Bg1} alt="Background" />
               {/* Overlaying image */}
-              <div className="guys-read">
+              <div className="guys-read" data-aos="fade-right">
                 <img src={Men} alt="Foreground" />
               </div>
               {/* Text content */}
-              <div className="it-works-text">
+              <div className="it-works-text" data-aos="fade-left">
                 {/* Step 1 */}
                 <div className="icon">
                   <img src={Icon} alt="" />

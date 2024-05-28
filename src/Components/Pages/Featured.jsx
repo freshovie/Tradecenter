@@ -1,9 +1,17 @@
-import React from "react";
+import React, {useEffect}from "react";
 import { Banner, Banner1, Banner2, Banner3 } from "../../assets";
 import "./style.scss";
 import { FaArrowRightLong } from "react-icons/fa6";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS CSS
 
 const Featured = () => {
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, // Animation duration
+          once: true, // Whether animation should happen only once - while scrolling down
+        });
+      }, []);
   return (
     <React.Fragment>
       <div className="featured">
@@ -12,7 +20,7 @@ const Featured = () => {
           <div className="col-sm-12 col-md-12 col-lg-10">
             <h2>Featured Products</h2>
             <div className="product-card">
-              <div className="products">
+              <div className="products" data-aos="fade-up">
                 <img src={Banner} alt="" style={{ width: "100%" }} />
                 <div className="product-edit">
                   <p>SUMMER SALE</p>
@@ -26,7 +34,7 @@ const Featured = () => {
                   </button>
                 </div>
               </div>
-              <div className="products">
+              <div className="products" data-aos="fade-down">
                 <img src={Banner1} alt="" style={{ width: "100%" }} />
                 <div className="product-edit">
                   <p>BEST DEALS</p>
@@ -57,7 +65,7 @@ const Featured = () => {
                   </button>
                 </div>
               </div>
-              <div className="products">
+              <div className="products" data-aos="fade-up">
                 <img src={Banner2} alt="" style={{ width: "100%" }} />
                 <div className="product-edit">
                   <p className="darkp">85% FAT FREE</p>
@@ -71,7 +79,7 @@ const Featured = () => {
                   </button>
                 </div>
               </div>
-              <div className="products">
+              <div className="products" data-aos="fade-down">
                 <img src={Banner3} alt="" style={{ width: "100%" }} />
                 <div className="product-edit">
                   <p className="darkp">85% FAT FREE</p>

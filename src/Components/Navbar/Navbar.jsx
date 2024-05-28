@@ -1,73 +1,60 @@
-import React, { useState } from "react";
-import "./navbar.scss";
-import { Logo } from "../../assets";
-import { CiSearch } from "react-icons/ci";
-import { MdToc } from "react-icons/md";
-import {
-  MDBNavbar,
-  MDBContainer,
-  MDBNavbarBrand,
-  MDBNavbarToggler,
-  MDBCollapse,
-  MDBNavbarNav,
-  MDBNavbarItem,
-  MDBNavbarLink,
-  MDBIcon,
-  MDBInputGroup,
-} from "mdb-react-ui-kit";
+import React, {useEffect} from 'react';
+import './navbar.scss'; // Import your custom styles if needed
+import { Logos } from '../../assets';
+import { IoCartOutline } from "react-icons/io5";
+import { FaBars } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS CSS
 
 const Navbar = () => {
-  const [showBasic, setShowBasic] = useState(false);
-
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, // Animation duration
+          once: true, // Whether animation should happen only once - while scrolling down
+        });
+      }, []);
   return (
-          <MDBNavbar expand="lg" light bgColor="#c80606" className="d-flex">
-            <MDBContainer fluid>
-              <MDBNavbarBrand href="#">
-                <img src={Logo} alt="Logo" />
-              </MDBNavbarBrand>
-              <MDBNavbarToggler
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-                onClick={() => setShowBasic(!showBasic)}
-              >
-                <MDBIcon icon="bars" fas />
-              </MDBNavbarToggler>
-              <MDBCollapse navbar show={showBasic} id="navbarSupportedContent">
-                <MDBNavbarNav className="mr-auto">
-                <MDBInputGroup tag="form" className="d-flex w-auto mb-3">
-                <CiSearch  className=""/>
-                  <input className="form-control" placeholder="Search essentials, groceries and more..." type="search" />
-                  <MdToc className=""/>
-                </MDBInputGroup>
-                  <MDBContainer>
-                  <MDBNavbarItem className="nav-item active">
-                    <MDBNavbarLink href="#">
-                      Home <span className="sr-only">(current)</span>
-                    </MDBNavbarLink>
-                  </MDBNavbarItem>
-                  <MDBNavbarItem className="nav-item">
-                    <MDBNavbarLink href="#">Find a doctor</MDBNavbarLink>
-                  </MDBNavbarItem>
-                  <MDBNavbarItem className="nav-item">
-                    <MDBNavbarLink href="#">Apps</MDBNavbarLink>
-                  </MDBNavbarItem>
-                  <MDBNavbarItem className="nav-item">
-                    <MDBNavbarLink href="#">Testimonials</MDBNavbarLink>
-                  </MDBNavbarItem>
-                  </MDBContainer>
-                </MDBNavbarNav>
+    <nav className="navbar navbar-expand-lg navbar-light">
+      <div className="container">
+        <a className="navbar-brand me-2" href="https://mdbgo.com/" data-aos="fade-right">
+          <img
+            src={Logos}
+            height="16"
+            alt="MDB Logo"
+            className='w-100 h-100'
+            loading="lazy"
+            style={{ marginTop: '1px' }}
+          />
+        </a>
 
-                <MDBContainer className="flex-row">
-                    <button>About Us</button>
-                    <button>Products</button>
-                    <button>Start Shopping</button>
-                </MDBContainer>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarButtonsExample"
+          aria-controls="navbarButtonsExample"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <FaBars />
+        </button>
 
-
-              </MDBCollapse>
-            </MDBContainer>
-          </MDBNavbar>
+        <div className="collapse navbar-collapse" id="navbarButtonsExample">
+          <div className="d-flex ml-auto" data-aos="fade-left">
+            <button type="button" className="btn btn-link">
+              About us
+            </button>
+            <button type="button" className="btn btn-link">
+              Products
+            </button>
+            <button className="btn btn-light">
+              Start Shopping 
+              <IoCartOutline />
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 };
 

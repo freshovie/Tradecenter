@@ -1,7 +1,7 @@
 // Importing React and necessary components
 import React from "react";
 import { Hero, Brands, HowItWorks, Choose, Community, Featured, Subscribe} from "./Pages"; // Importing page components
-// import Navbar from "./Navbar/Navbar";
+import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer/Footer";
 import {
   BrowserRouter as Router, // Importing Router from react-router-dom
@@ -21,12 +21,12 @@ const Display = () => {
           {/* Nested container for page content */}
           <div className="display">
             {/* Uncomment the following line to include a Navbar */}
-            {/* <Navbar /> */}
+            <Navbar />
             {/* Rendering page components */}
             <Hero /> {/* Hero section */}
             <Brands /> {/* Brands section */}
             <HowItWorks /> {/* How it Works section */}
-            <Choose /> {/* Choose section */}
+            <Choose /> {/*Choose section */}
             <Community />
             <Featured />
             <Subscribe />

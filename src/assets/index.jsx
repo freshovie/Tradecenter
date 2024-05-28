@@ -31,3 +31,6 @@ export const Cart = require('./Cart.png'); // Side image
 export const Discover = require('./Discover.png'); // Side image
 export const Mastercard = require('./Mastercard.png'); // Side image
 export const Visa = require('./Visa.png'); // Side image
+export const Logos = require ('./Frame 427319018.png'); 
+export const GroupMen = require ('./Group Men.png'); 
+export const Couple = require ('./couple.png'); 
